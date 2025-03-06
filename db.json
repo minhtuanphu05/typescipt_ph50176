@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": "aedb",
+      "name": "uppppppppp",
+      "image": "https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/165802/Originals/100-hinh-nen-anime-nu-dep-cho-dien-thoai-may-tinh-an-tuong-hon-7.jpg",
+      "price": "111111323"
+    },
+    {
+      "id": "6c53",
+      "name": "update 1",
+      "image": "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/08/phim-hoat-hinh-3d-trung-quoc-hay-nhat-top-5.jpg.webp",
+      "price": "333"
+    }
+  ],
+  "users": [
+    {
+      "id": "fdf9",
+      "email": "awsd@gmail.com",
+      "password": "12345678",
+      "password2": "12345678"
+    }
+  ]
+}
