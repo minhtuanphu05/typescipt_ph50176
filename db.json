@@ -19,6 +19,18 @@
       "email": "awsd@gmail.com",
       "password": "12345678",
       "password2": "12345678"
+    },
+    {
+      "id": "9ca9",
+      "email": "bb1@gmail.com",
+      "password": "a123456789",
+      "password2": "a123456789"
+    },
+    {
+      "id": "a9d4",
+      "email": "b1@gmail.com",
+      "password": "12345678",
+      "password2": "12345678"
     }
   ]
 }

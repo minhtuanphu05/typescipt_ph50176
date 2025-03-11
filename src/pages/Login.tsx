@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 type ProductInput = {
     email:string,
@@ -16,12 +16,16 @@ function Login() {
     }= useForm<ProductInput>()
     const navigate = useNavigate()
    
-    const onSubmit : SubmitHandler<ProductInput> = async (data)=>{
+    const onSubmit : SubmitHandler<ProductInput> = async (data:ProductInput)=>{
         try {
             const res = await axios.get(`http://localhost:3000/users`)
-            const user = res.data.find((u:any)=>u.email===data.email && u.password===data.password)
+            const user = res.data.find((u:any)=>u.email===data.email)
             if (!user) {
-                alert("tk / mk ko chinh xac !")
+                alert("tk ko ton tai !")
+                return
+            }
+            if (user.password !== data.password) {
+                alert("sai mk !")
                 return
             }
             const fakeToken = ` ${user.email} `;

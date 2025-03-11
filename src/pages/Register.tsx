@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect } from "react"
+import { use, useEffect } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { useNavigate, useParams } from "react-router-dom"
 
@@ -20,6 +20,12 @@ function Register() {
    
     const onSubmit : SubmitHandler<ProductInput> = async (data)=>{
         try {
+            const user = await axios.get(`http://localhost:3000/users`)
+            const checkUser = user.data.find((u:any)=>u.email===data.email)
+            if (checkUser) {
+                alert("tk da ton tai")
+                return
+            }
             const res = await axios.post(`http://localhost:3000/users`,data)
             if (res.status===201 || res.status===200) {
                 alert("dang ky thanh cong")
